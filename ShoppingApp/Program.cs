@@ -1,17 +1,21 @@
 ﻿using Shopping;
 using System;
+using System.Runtime.CompilerServices;
 
 namespace MyApp // Note: actual namespace depends on the project name.
 {
     internal class Program
     {
-        Cart cart = new Cart();
-        
+        static Cart _cart = new Cart();
 
-        
+
+
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            foreach (Article article in _cart.Articles)
+            {
+                _cart.Remove(article)
+            }
         }
     }
 }
