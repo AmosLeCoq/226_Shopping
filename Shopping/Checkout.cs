@@ -10,19 +10,31 @@
         #region public methods
         public void Add(List<Article> articles)
         {
-            throw new NotImplementedException();
+            _articles.AddRange(articles);
+            _balance++;
         }
 
         public List<Article> Remove(Boolean empty = false)
         {
-            throw new NotImplementedException();
+            List<Article> articlesReadyToCheckout = new List<Article>();
+            if (empty == true)
+            {
+                articlesReadyToCheckout.AddRange(_articles);
+                _articles.Clear();
+            }
+            else
+            {
+                articlesReadyToCheckout.Add(_articles.Last());
+                _articles.Remove(_articles.Last());
+            }
+            return articlesReadyToCheckout;
         }
 
         public List<Article> Articles
         {
             get
             {
-                throw new NotImplementedException();
+                return _articles;
             }
         }
 
@@ -30,7 +42,7 @@
         {
             get
             {
-                throw new NotImplementedException();
+                return _balance;
             }
         }
         #endregion public methods

@@ -22,11 +22,11 @@ namespace Shopping
                 articlesReadyToCheckout.AddRange(_articles);
                 _articles.Clear();
             }
-            else
-            {
-                articlesReadyToCheckout.Add(_articles.Last());
-                _articles.Remove(_articles.Last());             
-            }
+            
+           
+            articlesReadyToCheckout.Add(_articles.Last());
+            _articles.Remove(_articles.Last());             
+            
             return articlesReadyToCheckout;
         }
 
