@@ -12,10 +12,11 @@ namespace MyApp // Note: actual namespace depends on the project name.
 
         static void Main(string[] args)
         {
-            foreach (Article article in _cart.Articles)
+           /* foreach (Article article in _cart.Articles)
             {
                 _cart.Remove(article)
             }
+           */
         }
     }
 }
