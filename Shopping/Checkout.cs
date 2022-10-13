@@ -45,6 +45,11 @@
                 return _balance;
             }
         }
+
+        public void StartCashingProcess()
+        {
+            throw new NotImplementedException();
+        }
         #endregion public methods
 
         #region private methods
