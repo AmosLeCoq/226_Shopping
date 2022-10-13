@@ -12,6 +12,7 @@
         {
             _articles.AddRange(articles);
             UpdateBalance();
+            
         }
 
         public List<Article> Remove(Boolean empty = false)
@@ -48,7 +49,7 @@
 
         public void StartCashingProcess()
         {
-            throw new NotImplementedException();
+            _balance = 0;
         }
         #endregion public methods
 
