@@ -11,7 +11,7 @@
         public void Add(List<Article> articles)
         {
             _articles.AddRange(articles);
-            _balance++;
+            UpdateBalance();
         }
 
         public List<Article> Remove(Boolean empty = false)
@@ -56,7 +56,10 @@
         private void UpdateBalance()
         {
             {
-                throw new NotImplementedException();
+                foreach (Article article in _articles)
+                {
+                    _balance += article.Price;
+                }
             }
         }
         #endregion private methods
